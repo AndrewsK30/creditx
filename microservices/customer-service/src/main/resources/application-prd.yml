@@ -1,0 +1,11 @@
+spring:
+    profiles:
+      active: prd
+    datasource:
+      url: jdbc:postgresql://localhost:5432/root
+      username: root
+      password: root12345
+    jpa:
+      properties:
+        hibernate:
+          default_schema: creditx_prd

@@ -1,0 +1,24 @@
+logging:
+    level:
+        root: WARN
+        org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer: INFO
+        org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainer: INFO
+        br.com.gpa: INFO
+spring:
+  profiles:
+    active: @spring.profiles.active@
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database: POSTGRESQL
+    show-sql: false
+  cloud:
+    stream:
+      bindings:
+        customer-interest-percentage-calculate-output:
+            destination: customer-interest-percentage-calculate-queue
+            content-type: application/json
+        customer-interest-percentage-calculate-done-input:
+            destination: customer-interest-percentage-calculate-done-queue
+            content-type: application/json
+server:
+    port: 8040

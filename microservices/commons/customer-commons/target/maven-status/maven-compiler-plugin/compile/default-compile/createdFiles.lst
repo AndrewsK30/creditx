@@ -1,0 +1,3 @@
+br/com/creditx/customer/model/CreditRiskModel.class
+br/com/creditx/customer/type/RiskType.class
+br/com/creditx/customer/model/CreditRiskModel$CreditRiskModelBuilder.class
